@@ -1,40 +1,7 @@
-Prologue by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+As an aspiring Mechanical Engineer specializing in Robotics and Control Systems with a keen interest in the software for robots, I am eagerly seeking summer internships for 2023. Currently pursuing my Master's degree at Carnegie Mellon University, I am immensely passionate about the intersection of Robotics, Computer Vision, and Learning.
 
+My academic and research background in Computer Vision, Machine Learning, and Control, along with my contributions to a Computer Vision-related project in the BioRobotics lab under the guidance of Professor Howie Choset, has instilled in me a strong foundation in the field of Robotics and Control Systems. Furthermore, my current courses in Visual Learning and Recognition, SLAM, and Trustworthy AI Autonomy, combined with my on-going projects, have honed my skills and expertise.
 
-This is Prologue, a simple, single page responsive site template. It features a
-clean, minimalistic design and a sticky sidebar with navigation-linked scrolling.
+I have garnered practical experience as an R&D Software Developer for the Assembly Simulation Team of DELMIA at Dassault Systemes, where I have refined my problem-solving skills, learned effective code maintenance, worked in a team-based environment, developed leadership and communication skills, and developed a patient attitude.
 
-Demo content images* are courtesy of the ridiculously talented Felicia Simion. Check out
-more of her amazing work over at deviantART:
-
-http://ineedchemicalx.deviantart.com/
-
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Felicia's work without her explicit permission!)
-
-Demo banner images* courtesy of Unsplash, a radtastic collection of CC0 (public domain)
-images you can use for pretty much whatever.
-
-(* = Not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
-
-
-Credits:
-
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+I am fervently excited to apply my academic and practical knowledge, skillset, and experience to new challenges and opportunities in the field of autonomous software development. My passion, drive, and commitment to learning and growing make me an ideal candidate for an internship in this field.
