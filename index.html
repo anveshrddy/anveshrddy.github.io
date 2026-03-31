@@ -1,231 +1,690 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Anvesh Reddy</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anvesh Reddy Gummi — Robotics & Computer Vision Engineer</title>
+  <meta name="description" content="Portfolio of Anvesh Reddy Gummi — CMU Robotics MS. Building real-time perception systems, edge AI, and vision pipelines." />
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Intro</a></li>
-							<li><a href="#one">Projects</a></li>
-							<li><a href="#two">Resume</a></li>
-							<!-- <li><a href="#three">Get in touch</a></li> -->
-						</ul>
-					</nav>
-				</div>
-			</section>
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Anvesh Reddy Gummi" />
+  <meta property="og:description" content="Robotics & Computer Vision Engineer | CMU Robotics MS" />
+  <meta property="og:type"        content="website" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style2 fullscreen fade-up">
-						<div class="inner">
-							<h1>Anvesh Reddy Gummi</h1>
-							<p>Currently pursuing my Master's degree at Carnegie Mellon University, I am immensely passionate about the intersection of Robotics, Computer Vision, and Learning. As an aspiring engineer specializing in Robotics and Computer Vision with a keen interest in the software for robots, I am eagerly seeking summer internships for 2023. </p>
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-							<p>My academic and research background along with my contributions to a Computer Vision-related project in the BioRobotics lab under the guidance of Professor Howie Choset, has instilled in me a strong foundation in the field of Robotics. Furthermore, my courses in Visual Learning and Recognition (16824), SLAM (16833), Computer Vision (16720B), and Machine Learning (24787) combined with my on-going projects, have honed my skills and expertise.</p>
-								
-							<p>I have garnered practical experience as an R&D Software Developer for the Assembly Simulation Team of DELMIA at Dassault Systemes, where I have refined my problem-solving skills, learned effective code maintenance, worked in a team-based environment, developed leadership and communication skills, and developed a patient attitude.</p>
-								
-							<p>	I am fervently excited to apply my academic and practical knowledge, skillset, and experience to new challenges and opportunities in the field of autonomous software development. My passion, drive, and commitment to learning and growing make me an ideal candidate for an internship in this field.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">My projects</a></li>
-							</ul>
-						</div>
-					</section>
+  <!-- Three.js & GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 spotlights">
-						<section>
-							<a href="Super-VLOAM.html" class="image"><img src="images/SuperVLOAM/svloamtopview.png" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Super-VLOAM</h2>
-									<p>For visual odometry in VLOAM, used Superpoint and Superglue deep learning models for feature extraction/matching. Compared with ORB-SLAM2, VLOAM. Requires more fine-tuning to justify GPU costs.
-									<ul class="actions">
-										<li><a href="Super-VLOAM.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="Fashion.html" class="image"><img src="images/FashionisAllYouNeed/result.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Fashion is All You Need</h2>
-									<p>Adding texture control and pose control to stable diffusion model for generating new clothes on a reference human model.</p>
-									<ul class="actions">
-										<li><a href="Fashion.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="lungcancer.html" class="image"><img src="images/LungCancer/lungCancer.png" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Lung cancer detection</h2>
-									<p>Trained a custom model to classify malignant cancer cells in Lung CT Scan images using Convolutional Neural
-										Networks (CNNs) and Recurrent Neural Networks (RNNs), appended Mask-RCNN for locating malignant nodules.</p>
-									<ul class="actions">
-										<li><a href="lungcancer.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="Bow.html" class="image"><img src="images/Bow/bow.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Bag of Visual Words for Scene Classification</h2>
-									<p> Implemented the popular bag of words approach for classifying scenes from the SUN image dataset.</p>
-									<ul class="actions">
-										<li><a href="Bow.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						
-					</section>
+  <!-- Scroll progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style2 fullscreen fade-up">
-						<div class="inner">
-							<h2>Resume</h2>
-							<object data="Anvesh_ComputerVision.pdf" type="application/pdf" width="100%" height="400%"></object>
-							<p>If the resume is improperly displayed, download it from <a href="Anvesh_Resume" download="Anvesh_ComputerVision.pdf">here!</a>
-							<!-- <iframe src="Anvesh_Resume.pdf" width="100%" height="100%"></iframe> -->
-							<!-- <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div> -->
-							<!-- <ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul> -->
-						</div>
-					</section>
+  <!-- Custom cursor (desktop only) -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-				<!-- Three
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section> -->
+  <!-- Email copy toast -->
+  <div id="copy-toast" role="status" aria-live="polite">Copied!</div>
 
-			</div>
+  <!-- ══════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Home">
+      A<span class="dot" aria-hidden="true"></span>R<span class="dot" aria-hidden="true"></span>G
+    </a>
 
-		<!-- Footer -->
-			<!-- <footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer> -->
+    <ul class="nav-links" role="list">
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <div class="nav-status" aria-label="Availability status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-label">Open to work</span>
+    </div>
 
-	</body>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <button class="menu-close" aria-label="Close menu">✕</button>
+    <a href="#projects">Work</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <div class="nav-status" style="margin-top:24px;">
+      <span class="status-dot"></span>
+      <span class="status-label">Open to work</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-tagline">
+        // building at the edge of software &amp; hardware
+        <span class="cursor-blink" aria-hidden="true"></span>
+      </p>
+      <h1 class="hero-name">Anvesh Reddy Gummi</h1>
+      <p class="hero-subtitle">
+        Robotics engineer with a thing for real-time perception, edge AI, and making machines see.
+        CMU Robotics '23. Currently building vision systems that keep people safe.
+      </p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+
+    <!-- Floating metrics -->
+    <div class="hero-metrics" aria-label="Key metrics">
+      <div class="metric-block">
+        <span class="metric-value">&lt;25ms</span>
+        <span class="metric-label">Detection Latency</span>
+      </div>
+      <div class="metric-block">
+        <span class="metric-value">6+</span>
+        <span class="metric-label">Shipped Systems</span>
+      </div>
+      <div class="metric-block">
+        <span class="metric-value">CMU '23</span>
+        <span class="metric-label">Robotics MS</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-chevron"></div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about" aria-label="About">
+    <div class="section">
+      <div class="section-inner">
+        <div class="about-text">
+          <span class="section-tag reveal" data-delay="0">01 / About</span>
+          <h2 class="about-heading reveal" data-delay="0.1">I make machines perceive.</h2>
+          <p class="reveal" data-delay="0.2">
+            I'm a robotics and computer vision engineer who started with mechanical engineering and never stopped
+            going deeper into how software and hardware connect. My path took me from Dassault Systèmes — where I
+            spent three years building assembly simulation software in C++ — to Carnegie Mellon, where I immersed
+            myself in SLAM, deep learning, and sensor fusion.
+          </p>
+          <p class="reveal" data-delay="0.25">
+            At VirtuSense Technologies, I build real-time fall prevention systems that run on edge hardware and
+            make hospitals safer. The work spans the full stack: training YOLOv8 models, deploying on Jetson
+            hardware, building AWS pipelines, and tuning for latency that actually matters.
+          </p>
+          <p class="reveal" data-delay="0.3">
+            I'm drawn to problems where the software has to exist in the real world — where a 200ms delay means
+            something fails, where the camera has to work in bad light, and where "good enough" isn't.
+          </p>
+          <div class="identity-tags reveal" data-delay="0.35">
+            <span class="identity-tag">Computer Vision</span>
+            <span class="identity-tag">Edge AI</span>
+            <span class="identity-tag">Robotics</span>
+            <span class="identity-tag">SLAM</span>
+            <span class="identity-tag">Sensor Fusion</span>
+            <span class="identity-tag">Deep Learning</span>
+            <span class="identity-tag">Hardware Prototyping</span>
+            <span class="identity-tag">ROS / ROS2</span>
+          </div>
+        </div>
+
+        <!-- Animated circuit SVG -->
+        <div class="about-visual reveal" data-delay="0.15" aria-hidden="true">
+          <svg class="circuit-svg" viewBox="0 0 400 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Trace lines -->
+            <path class="circuit-trace" d="M60 80 H180 V140 H300 V200" />
+            <path class="circuit-trace" d="M60 200 H120 V280 H260 V320 H340" style="animation-delay:-1s" />
+            <path class="circuit-trace" d="M200 40 V100 H320 V160 H360 V240" style="animation-delay:-2s" />
+            <path class="circuit-trace" d="M40 300 H100 V240 H200 V180 H280" style="animation-delay:-1.5s" />
+            <path class="circuit-trace" d="M140 320 V260 H80 V180 H160 V120" style="animation-delay:-0.5s" />
+            <path class="circuit-trace" d="M360 80 H300 V120 H220 V180" style="animation-delay:-3s" />
+            <!-- Larger connector squares -->
+            <rect x="170" y="130" width="20" height="20" stroke="#00E5FF" stroke-width="1" fill="none" opacity="0.12" />
+            <rect x="290" y="190" width="18" height="18" stroke="#00E5FF" stroke-width="1" fill="none" opacity="0.1" />
+            <rect x="108" y="270" width="16" height="16" stroke="#8B5CF6" stroke-width="1" fill="none" opacity="0.1" />
+            <!-- Circuit nodes -->
+            <circle class="circuit-node" cx="60"  cy="80"  r="5" />
+            <circle class="circuit-node" cx="180" cy="80"  r="4" />
+            <circle class="circuit-node" cx="300" cy="140" r="5" />
+            <circle class="circuit-node" cx="200" cy="200" r="6" />
+            <circle class="circuit-node" cx="120" cy="280" r="4" />
+            <circle class="circuit-node" cx="340" cy="320" r="5" />
+            <circle class="circuit-node" cx="200" cy="40"  r="4" />
+            <circle class="circuit-node" cx="360" cy="160" r="5" />
+            <circle class="circuit-node" cx="100" cy="180" r="4" />
+            <circle class="circuit-node" cx="280" cy="260" r="5" />
+            <!-- Small chip outline -->
+            <rect x="150" y="150" width="80" height="56" rx="4" stroke="#00E5FF" stroke-width="1" fill="rgba(0,229,255,0.03)" opacity="0.4" />
+            <!-- Chip pins -->
+            <line x1="150" y1="164" x2="136" y2="164" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <line x1="150" y1="178" x2="136" y2="178" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <line x1="150" y1="192" x2="136" y2="192" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <line x1="230" y1="164" x2="244" y2="164" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <line x1="230" y1="178" x2="244" y2="178" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <line x1="230" y1="192" x2="244" y2="192" stroke="#00E5FF" stroke-width="1" opacity="0.25" />
+            <!-- "CPU" label -->
+            <text x="190" y="183" font-family="JetBrains Mono, monospace" font-size="11" fill="#00E5FF" opacity="0.3" text-anchor="middle">CV</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
+  <section id="projects" aria-label="Projects">
+    <div class="section" style="max-width:1400px;margin:0 auto;">
+      <div class="projects-header">
+        <span class="section-tag reveal">02 / Work</span>
+        <h2 class="section-heading reveal" data-delay="0.1">Things I've Built</h2>
+        <p class="projects-subtext reveal" data-delay="0.2">From real-time fall detection to SLAM pipelines — systems that ship.</p>
+      </div>
+
+      <!-- Featured card -->
+      <article class="project-card-featured reveal" data-delay="0.1" aria-label="Featured project: Real-Time Fall Prevention System">
+        <div class="card-image">
+          <div class="card-image-placeholder">
+            <!-- Placeholder: replace with actual screenshot -->
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="10" width="40" height="28" rx="3" stroke="#00E5FF" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="7" stroke="#00E5FF" stroke-width="1.5"/>
+              <circle cx="24" cy="24" r="3" fill="#00E5FF" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="card-image-overlay"><span>View Project →</span></div>
+        </div>
+        <div class="card-content">
+          <div class="card-badge">Featured · VirtuSense Technologies</div>
+          <h3 class="card-title">Real-Time Fall Prevention System</h3>
+          <p class="card-desc">
+            Production CV + multimodal AI platform deployed in hospitals. Sub-25ms fall prevention pipeline
+            (YOLOv8, monocular depth), distributed Flask microservices across GPU servers and edge devices,
+            patient-cooperative voice assistant (Whisper, Bio-Clinical BERT, WakeWord, TTS), AWS infrastructure.
+          </p>
+          <div class="card-tags">
+            <span class="tag">YOLOv8</span>
+            <span class="tag">Whisper</span>
+            <span class="tag">BERT</span>
+            <span class="tag">Jetson</span>
+            <span class="tag">Flask</span>
+            <span class="tag">AWS Greengrass</span>
+            <span class="tag">Monocular Depth</span>
+            <span class="tag">Docker</span>
+          </div>
+          <div class="card-links">
+            <span class="card-link" style="color:var(--text-muted);cursor:default;">
+              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.5 7.5a.5.5 0 010 1h-3v3a.5.5 0 01-1 0v-3h-3a.5.5 0 010-1h3v-3a.5.5 0 011 0v3h3z"/></svg>
+              Private / Production
+            </span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project grid -->
+      <div class="projects-grid">
+
+        <!-- Super-VLOAM -->
+        <article class="project-card reveal" data-delay="0.1" aria-label="Project: Super-VLOAM">
+          <div class="card-image">
+            <img src="images/SuperVLOAM/svloamtopview.png" alt="Super-VLOAM top view trajectory" loading="lazy" />
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Robotics · SLAM</div>
+            <h3 class="card-title">Super-VLOAM</h3>
+            <p class="card-desc">Replaced classical feature extraction in Visual-LiDAR Odometry with SuperPoint + SuperGlue deep learning models. Tested on KITTI dataset against ORB-SLAM2 baseline.</p>
+            <div class="card-tags">
+              <span class="tag">C++</span>
+              <span class="tag">Python</span>
+              <span class="tag">SuperPoint</span>
+              <span class="tag">ROS</span>
+              <span class="tag">KITTI</span>
+            </div>
+            <div class="card-links">
+              <a href="Super-VLOAM.html" class="card-link">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h12v12H2V2zm1 1v10h10V3H3zm2 2h6v1H5V5zm0 2h6v1H5V7zm0 2h4v1H5V9z"/></svg>
+                Read More
+              </a>
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fashion is All You Need -->
+        <article class="project-card reveal" data-delay="0.15" aria-label="Project: Fashion is All You Need">
+          <div class="card-image">
+            <img src="images/FashionisAllYouNeed/result.jpg" alt="Fashion generation result" loading="lazy" />
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Generative AI · Vision</div>
+            <h3 class="card-title">Fashion is All You Need</h3>
+            <p class="card-desc">Added texture and pose control to Stable Diffusion for generating new clothes on reference human models. Cloth segmentation + augmented inpainting pipeline.</p>
+            <div class="card-tags">
+              <span class="tag">Stable Diffusion</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">ControlNet</span>
+              <span class="tag">Segmentation</span>
+            </div>
+            <div class="card-links">
+              <a href="Fashion.html" class="card-link">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h12v12H2V2zm1 1v10h10V3H3zm2 2h6v1H5V5zm0 2h6v1H5V7zm0 2h4v1H5V9z"/></svg>
+                Read More
+              </a>
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Visual Learning & Recognition -->
+        <article class="project-card reveal" data-delay="0.2" aria-label="Project: Visual Learning and Recognition">
+          <div class="card-image">
+            <div class="card-image-placeholder">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="10" stroke="#00E5FF" stroke-width="1.5"/>
+                <circle cx="24" cy="24" r="4"  fill="#00E5FF" opacity="0.3"/>
+                <path d="M4 24 C8 14 16 8 24 8 C32 8 40 14 44 24 C40 34 32 40 24 40 C16 40 8 34 4 24Z" stroke="#8B5CF6" stroke-width="1" fill="none" opacity="0.4"/>
+              </svg>
+            </div>
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Deep Learning · CMU 16-824</div>
+            <h3 class="card-title">Visual Learning & Recognition</h3>
+            <p class="card-desc">FCOS object detection (21.7% mAP, Pascal VOC); GAN training on CUB2011 (W-GAN FID 72.5); Diffusion inference (DDPM FID 31.8); image captioning Transformer on COCO (loss 0.03); ViT on CIFAR10 (68% acc).</p>
+            <div class="card-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">FCOS</span>
+              <span class="tag">GANs</span>
+              <span class="tag">Diffusion Models</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">ViT</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lung Cancer -->
+        <article class="project-card reveal" data-delay="0.25" aria-label="Project: Lung Cancer Detection">
+          <div class="card-image">
+            <img src="images/LungCancer/lungCancer.png" alt="Lung cancer detection visualization" loading="lazy" />
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Medical CV · Deep Learning</div>
+            <h3 class="card-title">Lung Cancer Detection</h3>
+            <p class="card-desc">CNN+LSTM pipeline for classifying malignant nodules in 3D CT scans treated as sequential 2D slices. Mask-RCNN for precise nodule localization.</p>
+            <div class="card-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">CNN</span>
+              <span class="tag">LSTM</span>
+              <span class="tag">Mask-RCNN</span>
+              <span class="tag">Medical Imaging</span>
+            </div>
+            <div class="card-links">
+              <a href="lungcancer.html" class="card-link">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h12v12H2V2zm1 1v10h10V3H3zm2 2h6v1H5V5zm0 2h6v1H5V7zm0 2h4v1H5V9z"/></svg>
+                Read More
+              </a>
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shelf Item Finder — Placeholder -->
+        <article class="project-card reveal" data-delay="0.25" aria-label="Project: Shelf Item Finder (placeholder)">
+          <div class="card-image">
+            <div class="card-image-placeholder">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="12" width="36" height="5" rx="1" stroke="#00E5FF" stroke-width="1.5"/>
+                <rect x="6" y="22" width="36" height="5" rx="1" stroke="#00E5FF" stroke-width="1.5"/>
+                <rect x="6" y="32" width="36" height="5" rx="1" stroke="#00E5FF" stroke-width="1.5"/>
+                <circle cx="36" cy="36" r="8" stroke="#8B5CF6" stroke-width="1.5"/>
+                <line x1="42" y1="42" x2="46" y2="46" stroke="#8B5CF6" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Computer Vision · Retail</div>
+            <h3 class="card-title">Shelf Item Finder</h3>
+            <p class="card-desc">Real-time object detection and localization system for identifying items on retail shelves. CV pipeline for inventory tracking and shopper assistance.</p>
+            <div class="card-tags">
+              <span class="tag">YOLOv7</span>
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Raspberry Pi</span>
+            </div>
+            <div class="card-links">
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bag of Visual Words -->
+        <article class="project-card reveal" data-delay="0.3" aria-label="Project: Bag of Visual Words">
+          <div class="card-image">
+            <img src="images/Bow/bow.jpg" alt="Bag of Visual Words scene classification" loading="lazy" />
+            <div class="card-image-overlay"><span>View Project →</span></div>
+          </div>
+          <div class="card-content">
+            <div class="card-badge">Classical CV · Research</div>
+            <h3 class="card-title">Bag of Visual Words</h3>
+            <p class="card-desc">Scene classification on the SUN dataset using BoW + Spatial Pyramid Matching. Harris corner detection, visual dictionary construction, and SVM classification.</p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">SVM</span>
+              <span class="tag">SPM</span>
+              <span class="tag">Harris</span>
+            </div>
+            <div class="card-links">
+              <a href="Bow.html" class="card-link">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 2h12v12H2V2zm1 1v10h10V3H3zm2 2h6v1H5V5zm0 2h6v1H5V7zm0 2h4v1H5V9z"/></svg>
+                Read More
+              </a>
+              <a href="#" class="card-link" aria-label="GitHub (placeholder)">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section id="skills" aria-label="Skills and tech stack">
+    <div class="section" style="max-width:1400px;margin:0 auto;">
+      <div class="skills-header">
+        <span class="section-tag reveal">03 / Stack</span>
+        <h2 class="section-heading reveal" data-delay="0.1">Tools of the Trade</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="reveal" data-delay="0.1">
+          <div class="skill-category-label">Perception &amp; Vision</div>
+          <div class="skill-nodes">
+            <span class="skill-node">OpenCV</span>
+            <span class="skill-node">YOLOv5/v7/v8</span>
+            <span class="skill-node">PyTorch</span>
+            <span class="skill-node">TensorFlow</span>
+            <span class="skill-node">ONNX</span>
+            <span class="skill-node">SuperPoint</span>
+            <span class="skill-node">SuperGlue</span>
+            <span class="skill-node">DepthAnything</span>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="0.15">
+          <div class="skill-category-label">Robotics &amp; SLAM</div>
+          <div class="skill-nodes">
+            <span class="skill-node">ROS / ROS2</span>
+            <span class="skill-node">EKF / UKF</span>
+            <span class="skill-node">Particle Filter</span>
+            <span class="skill-node">Graph SLAM</span>
+            <span class="skill-node">Visual Odometry</span>
+            <span class="skill-node">Sensor Fusion</span>
+            <span class="skill-node">Path Planning</span>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="0.2">
+          <div class="skill-category-label">Deep Learning</div>
+          <div class="skill-nodes">
+            <span class="skill-node">Transformers</span>
+            <span class="skill-node">CNNs</span>
+            <span class="skill-node">Diffusion Models</span>
+            <span class="skill-node">GANs</span>
+            <span class="skill-node">Transfer Learning</span>
+            <span class="skill-node">TensorRT</span>
+            <span class="skill-node">TFLite</span>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="0.25">
+          <div class="skill-category-label">Edge &amp; Hardware</div>
+          <div class="skill-nodes">
+            <span class="skill-node">Raspberry Pi</span>
+            <span class="skill-node">Jetson Nano/Orin</span>
+            <span class="skill-node">Arduino</span>
+            <span class="skill-node">Edge Deployment</span>
+            <span class="skill-node">On-device Inference</span>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="0.3">
+          <div class="skill-category-label">Infrastructure</div>
+          <div class="skill-nodes">
+            <span class="skill-node">Docker</span>
+            <span class="skill-node">AWS Greengrass</span>
+            <span class="skill-node">AWS Lambda</span>
+            <span class="skill-node">Flask / FastAPI</span>
+            <span class="skill-node">systemd</span>
+            <span class="skill-node">MariaDB</span>
+            <span class="skill-node">Linux</span>
+            <span class="skill-node">Git</span>
+          </div>
+        </div>
+
+        <div class="reveal" data-delay="0.35">
+          <div class="skill-category-label">Languages</div>
+          <div class="skill-nodes">
+            <span class="skill-node">Python</span>
+            <span class="skill-node">C++</span>
+            <span class="skill-node">JavaScript</span>
+            <span class="skill-node">MATLAB</span>
+            <span class="skill-node">Bash</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section id="experience" aria-label="Work experience">
+    <div class="section experience-inner">
+      <div class="experience-header">
+        <span class="section-tag reveal">04 / Experience</span>
+        <h2 class="section-heading reveal" data-delay="0.1">Where I've Been</h2>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <div class="timeline-entry reveal" data-delay="0.1" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">Feb 2024 — Present</div>
+          <div class="timeline-company">VirtuSense Technologies</div>
+          <div class="timeline-role">Deep Learning Software Engineer</div>
+          <ul class="timeline-bullets">
+            <li>Building real-time fall prevention CV pipeline deployed in hospital environments</li>
+            <li>Monocular depth estimation, multimodal AI, and edge deployment on Jetson hardware</li>
+            <li>AWS Greengrass fleet management, &lt;25ms detection latency in production</li>
+          </ul>
+        </div>
+
+        <div class="timeline-entry reveal" data-delay="0.15" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-company">ST Engineering — Aethon</div>
+          <div class="timeline-role">Robotics Software Intern</div>
+          <ul class="timeline-bullets">
+            <li>Built wall-mounted CV system for object detection and 3D localization in hospital corridors</li>
+            <li>YOLOv7-based detection pipeline with custom 3D localization module</li>
+          </ul>
+        </div>
+
+        <div class="timeline-entry reveal" data-delay="0.2" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2022 — 2023</div>
+          <div class="timeline-company">CMU Biorobotics Lab</div>
+          <div class="timeline-role">Graduate Researcher</div>
+          <ul class="timeline-bullets">
+            <li>Pipe inspection robots — real-time sensor data transmission and visualization</li>
+            <li>Advised by Prof. Howie Choset</li>
+          </ul>
+        </div>
+
+        <div class="timeline-entry reveal" data-delay="0.25" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2022 — 2023</div>
+          <div class="timeline-company">CMU Biometrics Lab</div>
+          <div class="timeline-role">Graduate Researcher</div>
+          <ul class="timeline-bullets">
+            <li>Face detection optimization for edge devices — latency reduction and quantization</li>
+          </ul>
+        </div>
+
+        <div class="timeline-entry reveal" data-delay="0.3" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2019 — 2022</div>
+          <div class="timeline-company">Dassault Systèmes</div>
+          <div class="timeline-role">R&amp;D Software Developer — DELMIA Assembly Simulation</div>
+          <ul class="timeline-bullets">
+            <li>C++ development for PLM assembly simulation tools used in aerospace &amp; automotive manufacturing</li>
+            <li>Code maintenance, team-based development, cross-functional collaboration</li>
+          </ul>
+        </div>
+
+        <div class="timeline-entry education reveal" data-delay="0.35" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2022 — 2023</div>
+          <div class="timeline-company">Carnegie Mellon University</div>
+          <div class="timeline-role">MS Robotics — Dec 2023</div>
+        </div>
+
+        <div class="timeline-entry education reveal" data-delay="0.4" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">2015 — 2019</div>
+          <div class="timeline-company">Undergraduate</div>
+          <div class="timeline-role">BE Mechanical Engineering</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider" />
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact">
+    <div class="contact-inner">
+      <span class="section-tag reveal">05 / Contact</span>
+      <h2 class="contact-heading grad-text reveal" data-delay="0.1">Let's build something.</h2>
+      <p class="contact-subtext reveal" data-delay="0.2">
+        Whether it's a robotics challenge, a CV pipeline, or a hardware hack —
+        I'm always up for building things that matter.
+      </p>
+      <a class="contact-email reveal" data-delay="0.3" data-email="anveshrddy@gmail.com"
+         href="mailto:anveshrddy@gmail.com" aria-label="Email anveshrddy@gmail.com (click to copy)">
+        anveshrddy@gmail.com
+      </a>
+      <div class="social-links reveal" data-delay="0.4">
+        <!-- GitHub -->
+        <a href="#" class="social-link" aria-label="GitHub profile" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/anvesh-reddy-gummi" class="social-link" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:anveshrddy@gmail.com" class="social-link" aria-label="Send email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+        <!-- Resume download -->
+        <a href="Anvesh_Resume_2026.pdf" class="social-link" aria-label="Download resume" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="12" y1="18" x2="12" y2="12"/>
+            <polyline points="9 15 12 18 15 15"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <span>© 2026 Anvesh Reddy Gummi. Built with obsessive attention to detail.</span>
+    <span>Designed &amp; developed by Anvesh</span>
+  </footer>
+
+  <!-- App (ES Module) -->
+  <script type="module" src="assets/js/app.js"></script>
+
+</body>
 </html>

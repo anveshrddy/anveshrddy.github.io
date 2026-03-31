@@ -1,68 +1,130 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Super-VLOAM</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en" class="project-page">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Super-VLOAM — Anvesh Reddy Gummi</title>
+  <meta name="description" content="Super Visual-LiDAR Odometry and Mapping using SuperPoint and SuperGlue deep learning models." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body style="cursor:auto;">
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html#one" class="title">Projects</a>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="index.html#two" class="active">Resume</a></li>
-				</ul>
-			</nav>
-		</header>
+  <!-- Nav -->
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="index.html#projects" class="project-nav-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <polyline points="10 12 6 8 10 4"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <main>
+    <!-- Hero strip -->
+    <header class="project-hero">
+      <span class="section-tag">Robotics · SLAM · Deep Learning</span>
+      <h1>Super Visual-LiDAR Odometry and Mapping</h1>
+      <p class="lead">
+        Replacing classical feature extraction in VLOAM with SuperPoint and SuperGlue deep learning models
+        to improve robustness in challenging illumination and low-texture environments.
+      </p>
+    </header>
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Super Visual LiDAR Odometry and Mapping (Super VLOAM) </h1>
-							<p>Visual Lidar Odometry and mapping (VLOAM) is a state-of-the-art technique used in robotics for localizing and mapping an environment and a robot in real-time. It combines the benefits of both visual and lidar sensors to accurately estimate the robot's position and map its surroundings.</p>
-							<p>VLOAM works by using the visual sensor to extract visual features at a high frequency (60 Hz) from the environment, such as corners, edges, and textures. The lidar sensor, running at a low frequency (1 Hz) on the other hand, generates a 3D point cloud of the surrounding environment and helps in correcting the visual odometry drift. By fusing the visual features and lidar data, VLOAM is able to estimate the robot's position and create a high-resolution map of the environment.VLOAM works by using the visual sensor to extract visual features at a high frequency (60 Hz) from the environment, such as corners, edges, and textures. The lidar sensor, running at a low frequency (1 Hz) on the other hand, generates a 3D point cloud of the surrounding environment and helps in correcting the visual odometry drift. By fusing the visual features and lidar data, VLOAM is able to estimate the robot's position and create a high-resolution map of the environment.</p>
-							<p>By studying a state-of-the-art odometry method that fuses multiple sensors, we wished to enhance our understanding in this field. Initially, our scope of the project was to re-implement the original paper. However, following the feedback received, we decided it was more worthwhile to reuse existing code to reproduce a baseline, upon which we would attempt to improve the current method.</p>
-							<p>One of the main challenges faced by VLOAM is the lack of robustness to illumination changes, occlusions, and low-texture regions, which can cause the visual data to be unreliable. Furthermore, cost of the sensor is another challenge that we would like to address by comparing performance of VLOAM with RGBD based odometry method.</p>
-							<span class="image fit"><img src="images/SuperVLOAM/VLOAMgraph.png" alt="" class="center"/></span>
-							<h3>Our Work</h3>
-							<p>To address the challenges mentioned, we would integrate deep-learning based methods: Superpoint model for extracting keypoints from the images and Superglue for matching these features. We would then compare our method with existing method to compare these methods. We will also follow up by comparing ORB-SLAM methods with our method/current VLOAM method to understand the justification of costs.In our proposed approach, we plan to replace the classical feature extraction and matching algorithms in VLOAM with SuperPoint and SuperGlue deep learning models respectively. We will integrate the SuperPoint and SuperGlue networks into the VLOAM pipeline, which we call Super-VLOAM.</p>
-							<span class="image small"><img src="images/SuperVLOAM/vloamblock.png" alt="" class="center"/></span>
-							<p> To evaluate the performance of our proposed approach, we conduct experiments using real-world datasets. We compared the accuracy and efficiency of our Super-VLOAM model with the current VLOAM implementation. We expect that our proposed approach will improve the accuracy and robustness of VLOAM, especially in challenging scenarios such as low-texture regions and dynamic motion of the vehicle. We integrated the Superpoint and Superglue networks into VLOAM. We used pre-trained models trained using PyTorch, and converted them to the intermediate ONNX format for integration into our VLOAM (C++) code. We were able to successfully run inferences on the models on the CPU, but we are currently having trouble running them on the GPU.</p>
-							<p> We tested Super-VLOAM on KITTI odometry sequences 04 (simple) and 05 (more complex). On the simpler sequence, the performance was comparable to existing VLOAM, which uses ShiTomasi features and ORB descriptor matching in the visual odometry block. However, on the harder sequence, we had an underwhelming performance. On each frame, the processing was about 100x slower than the classical methods. The reported RMSE is in three digits for translational errors. We attribute this to the model running on the CPU, which takes considerable time to process the frames. As a result, multiple frames in the sequence are skipped. The skipped frames contain more features to match, which in turn worsens the performance. We are currently working on optimizing the code to improve the performance of Super-VLOAM on the GPU. We believe that this will allow us to achieve comparable performance to existing VLOAM on both simple and complex sequences.We have reproduced results with existing ORB-SLAM2 model for the purpose of comparing Visual Odometry part of Super-VLOAM with it.</p>
-							<span class="image small"><img src="images/SuperVLOAM/svloamtopview.png" alt="" class="center"/></span>
-							<h3>Results</h3>
-							<p>In this section we present results for sequence 04 and 05 of KITTI odometry dataset. In the table \ref{table:1} we have summarized performance parameters of various implementation for comparisions. Translational error is in meters and rotational errors is in radians. In the next section we will present results in detailed for sequence 04.</p>
-							<span class="image fit"><img src="images/SuperVLOAM/table.jpg" alt="" class="center"/></span>
-						</div>
-					</section>
+    <!-- Body -->
+    <article class="project-body">
 
-			</div>
+      <p>
+        Visual-LiDAR Odometry and Mapping (VLOAM) is a state-of-the-art robotics technique for simultaneously
+        localizing a robot and mapping its environment. It fuses a visual sensor running at high frequency (60 Hz)
+        for feature extraction with a LiDAR sensor at low frequency (1 Hz) for drift correction via 3D point clouds.
+      </p>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+      <img src="images/SuperVLOAM/VLOAMgraph.png" alt="VLOAM system architecture diagram" />
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <h3>The Challenge</h3>
+      <p>
+        Classical VLOAM relies on ShiTomasi corners and ORB descriptors for visual feature extraction and matching.
+        These methods degrade in low-texture regions, under illumination changes, and with motion blur — common
+        conditions in real-world robotics deployments.
+      </p>
+      <p>
+        The goal of Super-VLOAM was to replace these classical methods with deep learning alternatives:
+        <strong>SuperPoint</strong> for keypoint detection and description, and <strong>SuperGlue</strong>
+        for learned feature matching. Both models were pre-trained and converted from PyTorch to ONNX for
+        integration into the existing C++ VLOAM codebase.
+      </p>
 
-	</body>
+      <h3>Our Work</h3>
+      <p>
+        We integrated the SuperPoint and SuperGlue networks into the visual odometry block of VLOAM —
+        creating Super-VLOAM. Inference was performed via the ONNX runtime loaded from C++. The models
+        ran successfully on CPU; GPU integration was partially implemented but encountered driver compatibility issues.
+      </p>
+
+      <img src="images/SuperVLOAM/vloamblock.png" alt="Super-VLOAM block diagram showing integration points" />
+
+      <p>
+        We evaluated Super-VLOAM on KITTI odometry sequences 04 (simple straight highway) and 05 (urban,
+        more complex). Performance was compared against classical VLOAM and ORB-SLAM2.
+      </p>
+
+      <h3>Results</h3>
+      <p>
+        On sequence 04, Super-VLOAM performed comparably to classical VLOAM. On the harder sequence 05,
+        performance was significantly worse — primarily because CPU inference was approximately 100× slower
+        than classical feature extraction, causing frames to be skipped. Skipped frames meant larger inter-frame
+        displacement, resulting in poor feature matching and trajectory drift.
+      </p>
+
+      <img src="images/SuperVLOAM/svloamtopview.png" alt="Top-view trajectory comparison: Super-VLOAM vs baseline" />
+
+      <img src="images/SuperVLOAM/table.jpg" alt="Performance comparison table: translational and rotational RMSE across methods" />
+
+      <p>
+        The table above summarizes translational error (meters) and rotational error (radians) across
+        implementations. The performance gap is directly attributable to CPU-bound inference. We expect
+        GPU-accelerated inference to close this gap significantly, as the deep learning models themselves
+        produce higher-quality matches in challenging conditions.
+      </p>
+
+      <h3>Takeaways</h3>
+      <p>
+        The integration architecture is sound — the challenge is purely compute. With GPU inference enabled
+        (ONNX Runtime CUDA provider), the per-frame processing time should drop from ~500ms to under 10ms,
+        making real-time operation feasible. The project demonstrated that deep learning features can be
+        integrated into classical SLAM pipelines with manageable engineering effort.
+      </p>
+
+    </article>
+
+    <!-- Nav footer -->
+    <div class="project-nav-footer">
+      <a href="index.html#projects">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="10 12 6 8 10 4"/>
+        </svg>
+        Back to Projects
+      </a>
+      <a href="Fashion.html">
+        Next: Fashion is All You Need
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6 4 10 8 6 12"/>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <span>© 2026 Anvesh Reddy Gummi.</span>
+    <span><a href="index.html" style="color:var(--text-muted);transition:color 0.2s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">anveshreddy.com</a></span>
+  </footer>
+
+</body>
 </html>

@@ -1,70 +1,129 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Fashion is All You Need</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en" class="project-page">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashion is All You Need — Anvesh Reddy Gummi</title>
+  <meta name="description" content="Adding texture and pose control to Stable Diffusion for AI-driven fashion design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body style="cursor:auto;">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html#one" class="title">Projects</a>
-				<nav>
-					<ul>
-						<li><a href="index.html" class="active">Home</a></li>
-						<li><a href="index.html#two" class="active">Resume</a></li>
-					</ul>
-				</nav>
-			</header>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="index.html#projects" class="project-nav-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <polyline points="10 12 6 8 10 4"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <main>
+    <header class="project-hero">
+      <span class="section-tag">Generative AI · Computer Vision · Fashion</span>
+      <h1>Fashion is All You Need</h1>
+      <p class="lead">
+        Texture-controlled and pose-controlled image generation for fashion design —
+        using Stable Diffusion with cloth segmentation and inpainting to synthesize
+        new clothing on reference human models.
+      </p>
+    </header>
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Fashion is All You Need</h1>
-							<p>The incorporation of Artificial Intelligence (AI) into fashion design can bolster the creativity of fashion designers, improve the sustainability of the fashion industry, and reduce the cost of fashion photography. By using AI to generate synthetic images of clothing, designers can experiment with new designs and styles without having to produce physical prototypes. This can save time and money, and it can also help to reduce waste. Additionally, AI can be used to predict trends, so that designers can create clothing that is more likely to be popular. This can help to reduce the amount of unsold clothing, which is a major contributor to environmental pollution. Overall, the use of AI in fashion design has the potential to make the fashion industry more creative, sustainable, and affordable.</p>
-							<h3>Prior Work</h3>
-							<p>Repaint, DiffFashion, InstructPix2Pix, and StableDiffusion are deep learning models that can be used to generate clothes with different textures. Repaint can be used to transfer the texture of one image to another, such as from a painting to a photograph. DiffFashion can be used to generate clothes from scratch, taking into account the shape of the body, the type of fabric, and the desired texture. InstructPix2Pix can be used to generate images from text descriptions, such as a description of a person wearing a specific type of clothing. StableDiffusion can be used to generate high-quality images with realistic textures from noise. These models have the potential to be used by fashion designers to create new and innovative designs. They can be used to generate clothes with different textures, such as denim, leather, or silk. They can also be used to generate clothes from scratch, taking into account the shape of the body, the type of fabric, and the desired texture. Additionally, they can be used to generate images from text descriptions, such as a description of a person wearing a specific type of clothing.</p>
-							<p>Overall, these models offer a variety of possibilities for fashion designers. They can be used to create new and innovative designs, however our work showed that we do not get enough control over how the texture of the generated clothes.</p>
-							<span class="image small"><img src="images/FashionisAllYouNeed/priorWork.jpg" alt="" class="center"/></span>
-							<h3>Our work</h3>
-							<p> When generating images using AI, information such as cloth texture cannot be explained in text and visual context is needed. Thus, for input we take a reference image, reference texture, and a text input to generate new clothes based off the texture input.</p>
-							<span class="image fit"><img src="images/FashionisAllYouNeed/pipeline.jpg" alt="" class="center"/></span>
-							<p>First step is Cloth Segmentation. It helps provide the region of focus to the diffusion model and control regions that can be regenerated. For the next step, the segmentation mask is augmented with the cloth texture. To the stable diffusion model, we input the augmented image and also a text prompt: "Complete Woman's dress in high quality", to generate great results.</p>
-							<span class="image fit"><img src="images/FashionisAllYouNeed/flowchart.jpg" alt="" class="center"/></span>
-							<h3> Conclusion </h3>
-							<p>We were able to generate great results with the method proposed. These can be visualized below.</p>
-							<span class="image fit"><img src="images/FashionisAllYouNeed/result.jpg" alt="" class="center"/></span>
-							<span class="image fit"><img src="images/FashionisAllYouNeed/result1.jpg" alt="" class="center"/></span>
+    <article class="project-body">
 
+      <p>
+        The intersection of AI and fashion design offers real economic and environmental value: generating
+        synthetic clothing images eliminates the need for physical prototypes, reduces waste from unsold inventory,
+        and lowers the cost of fashion photography. The challenge is giving designers sufficient <em>control</em>
+        over the generated output — particularly cloth texture, which can't be adequately described in text.
+      </p>
 
-						</div>
-					</section>
+      <h3>Prior Work</h3>
+      <p>
+        We surveyed several relevant methods: Repaint for texture transfer, DiffFashion for garment generation,
+        InstructPix2Pix for text-guided image editing, and Stable Diffusion as the generative backbone.
+        While these methods produce high-quality images, none offered fine-grained control over cloth texture
+        when applied to fashion — text prompts alone couldn't capture specific fabric patterns or materials.
+      </p>
 
-			</div>
+      <img src="images/FashionisAllYouNeed/priorWork.jpg" alt="Prior work comparison: existing approaches to AI fashion generation" />
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+      <h3>Our Approach</h3>
+      <p>
+        Our insight: cloth texture is visual information, not textual. So instead of describing it, we
+        <em>show</em> it. The pipeline takes three inputs — a reference image of the person, a reference
+        texture image, and a text prompt — and generates a new outfit that applies the given texture.
+      </p>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <img src="images/FashionisAllYouNeed/pipeline.jpg" alt="System pipeline overview" />
 
-	</body>
+      <p>
+        The pipeline proceeds in three steps:
+      </p>
+      <p>
+        <strong>Step 1 — Cloth Segmentation:</strong> We use a segmentation model to isolate the clothing region
+        from the reference image. This mask defines the regeneration region and preserves the background and body.
+      </p>
+      <p>
+        <strong>Step 2 — Texture Augmentation:</strong> The segmentation mask is augmented with the target texture
+        image, creating an inpainting-ready input that visually shows the model where and what texture to apply.
+      </p>
+      <p>
+        <strong>Step 3 — Stable Diffusion Inpainting:</strong> We run the augmented image through Stable Diffusion's
+        inpainting pipeline with the prompt "Complete woman's dress in high quality." The model fills in the
+        masked region with the texture pattern while maintaining pose consistency.
+      </p>
+
+      <img src="images/FashionisAllYouNeed/flowchart.jpg" alt="Detailed pipeline flowchart" />
+
+      <h3>Results</h3>
+      <p>
+        The method produced visually convincing results across multiple texture types (denim, floral, solid colors)
+        and body poses. The segmentation mask effectively guided the inpainting to the target region without
+        bleeding into the background or skin.
+      </p>
+
+      <img src="images/FashionisAllYouNeed/result.jpg" alt="Generated results: texture-controlled fashion synthesis" />
+      <img src="images/FashionisAllYouNeed/result1.jpg" alt="Additional results across different textures and poses" />
+
+      <h3>Takeaways</h3>
+      <p>
+        This project demonstrated that combining explicit spatial control (segmentation masks) with visual
+        texture conditioning gives substantially better results than text-only prompting for fashion generation.
+        The main limitation is that the Stable Diffusion model sometimes interprets the augmented texture mask
+        as background rather than instruction — a challenge addressable with ControlNet conditioning or
+        fine-tuned inpainting models.
+      </p>
+
+    </article>
+
+    <div class="project-nav-footer">
+      <a href="Super-VLOAM.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="10 12 6 8 10 4"/>
+        </svg>
+        Prev: Super-VLOAM
+      </a>
+      <a href="lungcancer.html">
+        Next: Lung Cancer Detection
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6 4 10 8 6 12"/>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <span>© 2026 Anvesh Reddy Gummi.</span>
+    <span><a href="index.html" style="color:var(--text-muted);transition:color 0.2s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">anveshreddy.com</a></span>
+  </footer>
+
+</body>
 </html>

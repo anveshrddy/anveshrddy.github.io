@@ -1,73 +1,126 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Bag of Visual Words for Scene Classification</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en" class="project-page">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bag of Visual Words — Anvesh Reddy Gummi</title>
+  <meta name="description" content="Scene classification using Bag of Visual Words and Spatial Pyramid Matching on the SUN dataset." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body style="cursor:auto;">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html#one" class="title">Projects</a>
-				<nav>
-					<ul>
-						<li><a href="index.html" class="active">Home</a></li>
-						<li><a href="index.html#two" class="active">Resume</a></li>
-						<!-- <li><a href="elements.html">Elements</a></li> -->
-					</ul>
-				</nav>
-			</header>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="index.html#projects" class="project-nav-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <polyline points="10 12 6 8 10 4"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <main>
+    <header class="project-hero">
+      <span class="section-tag">Classical CV · Scene Recognition · CMU 16-720B</span>
+      <h1>Bag of Visual Words for Scene Classification</h1>
+      <p class="lead">
+        An end-to-end scene classification system using the Bag of Visual Words representation
+        and Spatial Pyramid Matching — classifying 8 scene categories from the SUN image dataset.
+      </p>
+    </header>
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Bag of Visual Words for Scene Classification</h1>
-							<p>Classification is one of the most classic tasks in computer vision. Given an image from a few predefined categories, classification requires to determine its belonging to which category. We developed a system for scene classification, experimenting on a subset of the SUN Image database consisting of eight scene categories. It is an end to end system that will, given a new scene image, determine which type of scene it is. In this project, we built a representation based on bags of visual words and used spatial pyramid matching for classifying the scene categories.</p>
-							<span class="image small"><img src="images/Bow/filters.jpg" alt="" class="center"/></span>
-							<span class="image small"><img src="images/Bow/filter_response.jpg" alt="" class="center"/></span>
-							<p>We started by building a dictionary of “visual words” from training data. This is similar to building something that is similar to a dictionary of words. We began by using Harris corner detector to pick interest points, extract visual words from interest points on images, form a visual dictionary, and represent each image as a vector of visual words.</p>
-							<p>Second step is to build a recognition system using the visual word dictionary built and training images that contain the scenes and the name of the scenes that are attributed to it. In this step, we used the visual words extracted from the previous step and a technique called Spatial Pyramid Matching to extract visual features from images. We then used these features and ground truth labels to build a simple recognition system.</p>
-							<p>We can see in the below figures how the visual words histogram is similar between the two images of the aquarium and distinctly different from the laundromat.</p>
-							<span class="image small"><img src="images/Bow/res1.jpg" alt="" class="center"/></span>
-							<span class="image small"><img src="images/Bow/res2.jpg" alt="" class="center"/></span>
-							<span class="image small"><img src="images/Bow/res3.jpg" alt="" class="center"/></span>
-							
-							<p>Though visual words do a good job in classifying, nowadays it has been shown that deep learning methods have a better generalization to thousands of classes. This is a limiting factor for this method but gives a great insight into how deep learning methods work on images.</p>
-							
+    <article class="project-body">
 
-						</div>
-					</section>
+      <p>
+        Scene classification is a foundational task in computer vision. Given an image, the system must
+        determine which of a set of predefined scene categories it belongs to. This project built a complete
+        pipeline — from raw pixels to classification — using the Bag of Visual Words (BoW) approach,
+        a precursor to modern deep learning that still offers strong intuitions about feature representation.
+      </p>
 
-			</div>
+      <h3>Visual Dictionary Construction</h3>
+      <p>
+        The first step is building a "visual dictionary" — analogous to a word dictionary in NLP.
+        We start by applying a Harris corner detector to find interest points in training images,
+        then extract local patch descriptors around each interest point using a filter bank.
+      </p>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+      <div class="project-image-grid">
+        <img src="images/Bow/filters.jpg" alt="Filter bank used for feature extraction" />
+        <img src="images/Bow/filter_response.jpg" alt="Filter responses on a sample image" />
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <p>
+        The filter responses are collected across all training images, then clustered with k-means to
+        produce a dictionary of K visual words. Each cluster center becomes a "word" — a representative
+        local appearance pattern that occurs frequently in the dataset.
+      </p>
 
-	</body>
+      <h3>Image Representation with Spatial Pyramid Matching</h3>
+      <p>
+        Once we have a dictionary, each image is represented as a histogram of visual word occurrences.
+        But a flat histogram loses all spatial information. We address this with
+        <strong>Spatial Pyramid Matching (SPM)</strong>: the image is divided into grids at multiple
+        resolutions (1×1, 2×2, 4×4), and histograms are computed for each cell. Concatenating these
+        produces a spatially-aware feature vector that captures where in the image different visual
+        patterns appear.
+      </p>
+
+      <img src="images/Bow/SpatialPyramidMatching.jpg" alt="Spatial Pyramid Matching illustration" />
+
+      <h3>Classification Results</h3>
+      <p>
+        Using an SVM classifier on the SPM features, we evaluated classification accuracy on 8 scene
+        categories from the SUN dataset. The visual word histograms are clearly discriminative:
+        two aquarium images share a very similar histogram, while an aquarium and laundromat have
+        distinctly different distributions.
+      </p>
+
+      <img src="images/Bow/res1.jpg" alt="Visual words histogram comparison: two aquarium scenes" />
+      <img src="images/Bow/res2.jpg" alt="Visual words histogram: aquarium vs laundromat comparison" />
+      <img src="images/Bow/res3.jpg" alt="Classification results across scene categories" />
+
+      <h3>Why This Matters</h3>
+      <p>
+        BoW approaches have been largely superseded by CNNs for large-scale recognition. But understanding
+        them is valuable — they illuminate how deep networks work: convolutional filters are essentially
+        learned generalizations of the hand-crafted filter banks used here, and pooling operations are
+        a smooth version of the histogram computation. The spatial pyramid is a direct precursor to
+        spatial pooling in modern architectures.
+      </p>
+      <p>
+        For 8 categories with limited data, BoW + SPM remains surprisingly competitive and trains
+        orders of magnitude faster than a neural network.
+      </p>
+
+    </article>
+
+    <div class="project-nav-footer">
+      <a href="lungcancer.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="10 12 6 8 10 4"/>
+        </svg>
+        Prev: Lung Cancer Detection
+      </a>
+      <a href="index.html#projects">
+        All Projects
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6 4 10 8 6 12"/>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <span>© 2026 Anvesh Reddy Gummi.</span>
+    <span><a href="index.html" style="color:var(--text-muted);transition:color 0.2s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">anveshreddy.com</a></span>
+  </footer>
+
+</body>
 </html>

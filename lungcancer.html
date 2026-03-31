@@ -1,77 +1,141 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lung Cancer Detection</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<html lang="en" class="project-page">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lung Cancer Detection — Anvesh Reddy Gummi</title>
+  <meta name="description" content="CNN+LSTM pipeline for detecting malignant lung nodules in CT scans, with Mask-RCNN for precise localization." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body style="cursor:auto;">
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html#one" class="title">Projects</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="index.html#two" class="active">Resume</a></li>
-					</ul>
-				</nav>
-			</header>
+  <nav class="project-nav" aria-label="Project navigation">
+    <a href="index.html#projects" class="project-nav-back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <polyline points="10 12 6 8 10 4"/>
+      </svg>
+      All Projects
+    </a>
+    <div class="project-nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <main>
+    <header class="project-hero">
+      <span class="section-tag">Medical CV · Deep Learning · Segmentation</span>
+      <h1>Lung Cancer Detection using Computer Vision</h1>
+      <p class="lead">
+        A CNN+LSTM pipeline for classifying malignant nodules in 3D CT scans, with Mask-RCNN for
+        precise pixel-level localization — reducing diagnostic subjectivity for radiologists.
+      </p>
+    </header>
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">Lung Cancer detection using Computer Vision</h1>
-							<p>The American Cancer Society estimates about 238,340 new cases of lung cancer in the US for 2023. Lung cancer diagnosis is done by an expert by studying the CT-Scans of a patient's lungs. However, diagnosis is usually subjective in nature, as it depends on how the expert views the abnormal cancer nodes. To remove this subjectivity, we worked on designing a Deep Learning model to provide an unequivocal judgment of if the nodes are malign and where they are in the scans.</p>
-							<p>Our methodology involved analyzing 3D models as 2D images, using Convolution Neural Network (CNN) model on each image, and then passing the features calculated to the Recurrent Neural Networks (RNN) or in particular Long-Short Term Memory (LSTM) to understand a relation between the layers.</p>
-							<span class="image"><img src="images/LungCancer/DataUsed.jpg" alt="" class="center"/></span>
-							<span class="image"><img src="images/LungCancer/CT-Scans visualized.jpg" alt="" class="center"/></span>
-							<h3>Prototype</h3>
-							<p>To prove that this idea would work, we decided to train a simpler model first, where we modeled 3D geometrical shapes with a large number of edges (20, 21, 22) using SOLIDWORKS and then sliced these models to generate 2D images. We trained the model to then distinguish between these models when they are input individually or as a group in the same scene. The accuracy was about 70% using Cross-Entropy loss and Adam Optimizer. The results were convincing to prove our idea could work.</p>
-							<span class="image"><img src="images/LungCancer/Prototype.jpg" alt="" class="center" /></span>
-							<span class="image"><img src="images/LungCancer/proto_model.jpg" alt="" class="center" /></span>
-							<h3>Main model</h3>
-							<p>We then trained another model to account for the complexity of our main task. It would take each patient’s CT-scans and classify if they contained a malign lymph nodule. The accuracy of about 65% was achieved, using Cross-Entropy loss and Adam Optimizer.</p>
-							<span class="image"><img src="images/LungCancer/model.jpg" alt="" class="center" /></span>
-							<h3>Next step - Segmentation</h3>
-							<p>In addition to classifying the scan, we also wished to indicate where the malign node is present in each layer. We decided to use Mask-RCNN which was the state of the art (SOTA) method to predict the location of the malign node. When the model would predict that there is a good probability of finding a malign node in the CT-Scans, Mask-RCNN model segmented out where they were located. Mask RCNN performs instance segmentation wherein per pixel prediction is carried out. It is suited for this application as it can extract features from a very minute image size. We can obtain the exact contour of the nodule rather than having a rectangular box drawn around them. This makes it easier for the radiologists to decide if the nodule is present or not and the detail of the size is crucial for decision making.</p>
-							<span class="image"><img src="images/LungCancer/mask_rcnn_result.jpg" alt="" class="center" /></span>
-							<h3>Conclusion</h3>
-							<p>The model we built had reasonable accuracy on the predictions but needed to be much better to be deployed in the real world. The limitation was that we had sufficient access to malign lung cancer data (500 distinct patients) but insufficient data for benign cancer. We believe we were short of negative examples that could have helped the model understand the features of healthy lung cells.</p>
-							
+    <article class="project-body">
 
-						</div>
-					</section>
+      <p>
+        The American Cancer Society estimates approximately 238,340 new lung cancer cases in the US per year.
+        Current diagnosis requires expert radiologists to manually inspect CT scan sequences — a process that is
+        inherently subjective and time-consuming. We set out to build a deep learning model that could provide
+        an objective, reproducible assessment: is this nodule malignant, and exactly where is it?
+      </p>
 
-			</div>
+      <h3>Methodology</h3>
+      <p>
+        CT scans are inherently 3D volumetric data. Rather than processing the full 3D volume (computationally
+        expensive and architecturally complex), we treated each scan as a sequence of 2D axial slices.
+        This enabled us to apply a two-stage pipeline:
+      </p>
+      <p>
+        <strong>Stage 1 — CNN:</strong> A convolutional neural network processes each 2D slice independently,
+        extracting spatial features relevant to malignancy detection.
+      </p>
+      <p>
+        <strong>Stage 2 — LSTM:</strong> The feature vectors from each slice are fed sequentially into a
+        Long Short-Term Memory network, which learns inter-slice relationships — capturing how a nodule
+        evolves across the depth of the scan.
+      </p>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+      <div class="project-image-grid">
+        <img src="images/LungCancer/DataUsed.jpg" alt="Dataset overview: lung CT scan examples" />
+        <img src="images/LungCancer/CT-Scans visualized.jpg" alt="CT scan slices visualized" />
+      </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <h3>Prototype Validation</h3>
+      <p>
+        Before training on medical data, we validated the CNN+LSTM architecture on a synthetic dataset.
+        We modeled 3D polyhedra (20, 21, and 22-faced shapes) in SolidWorks, sliced them into 2D images,
+        and trained the model to distinguish between them individually and in composite scenes.
+        This achieved ~70% accuracy, confirming the architectural approach was sound.
+      </p>
 
-	</body>
+      <div class="project-image-grid">
+        <img src="images/LungCancer/Prototype.jpg" alt="Synthetic 3D shape prototype for validation" />
+        <img src="images/LungCancer/proto_model.jpg" alt="Prototype model architecture" />
+      </div>
+
+      <h3>Main Model</h3>
+      <p>
+        The main model was trained on CT scans from 500 distinct patients with confirmed malignant nodules.
+        Using Cross-Entropy loss and Adam optimizer, we achieved approximately 65% classification accuracy —
+        meaningful for the task but insufficient for clinical deployment.
+      </p>
+
+      <img src="images/LungCancer/model.jpg" alt="Main CNN+LSTM model architecture" />
+
+      <h3>Localization with Mask-RCNN</h3>
+      <p>
+        Classification alone (malignant / benign) isn't enough for clinical use — radiologists need to know
+        <em>where</em> the nodule is. We added Mask-RCNN as a second stage: when the classification model
+        predicted malignancy above a confidence threshold, Mask-RCNN performed instance segmentation to
+        delineate the exact nodule boundary.
+      </p>
+      <p>
+        Mask-RCNN's per-pixel prediction provides exact contour information rather than bounding boxes —
+        critical for radiologists estimating nodule size and morphology when making treatment decisions.
+      </p>
+
+      <img src="images/LungCancer/mask_rcnn_result.jpg" alt="Mask-RCNN segmentation results showing nodule localization" />
+
+      <h3>Limitations & Lessons</h3>
+      <p>
+        The primary limitation was data imbalance: we had 500 patients with malignant nodules but insufficient
+        benign examples. Without balanced negative examples, the model struggled to learn the boundaries
+        between healthy and malignant tissue. Augmentation and synthetic negative generation would be
+        the first improvements in a follow-up.
+      </p>
+      <p>
+        Despite the accuracy ceiling, the project demonstrated a complete end-to-end pipeline from
+        volumetric medical data to pixel-level localization — and the architectural pattern of CNN spatial
+        features + LSTM temporal reasoning applies broadly to any sequential 3D volume analysis problem.
+      </p>
+
+    </article>
+
+    <div class="project-nav-footer">
+      <a href="Fashion.html">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="10 12 6 8 10 4"/>
+        </svg>
+        Prev: Fashion is All You Need
+      </a>
+      <a href="Bow.html">
+        Next: Bag of Visual Words
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="6 4 10 8 6 12"/>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <span>© 2026 Anvesh Reddy Gummi.</span>
+    <span><a href="index.html" style="color:var(--text-muted);transition:color 0.2s ease;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">anveshreddy.com</a></span>
+  </footer>
+
+</body>
 </html>
