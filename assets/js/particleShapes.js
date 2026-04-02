@@ -4,8 +4,8 @@
  * Each shape returns a Float32Array of [x, y, z, x, y, z, ...] for N particles.
  */
 
-const PARTICLE_COUNT = 2000;
-const MOBILE_COUNT   = 600;
+const PARTICLE_COUNT = 1200;
+const MOBILE_COUNT   = 400;
 
 function seededRandom(seed) {
   let s = seed;
